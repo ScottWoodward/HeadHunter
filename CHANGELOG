@@ -1,0 +1,4 @@
+Version 1.0.0
+-------------
+- Players killed by players will place a copy of the victim's head into the killer's inventory if there is room
+- Currently a bug prevents the dropping of heads as items, while preserving their player identity
