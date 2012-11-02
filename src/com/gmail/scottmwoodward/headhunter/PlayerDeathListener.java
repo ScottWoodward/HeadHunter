@@ -11,6 +11,7 @@ import net.minecraft.server.NBTTagCompound;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -26,8 +27,7 @@ public class PlayerDeathListener implements Listener{
     /**
      * This is the action executed when a player dies.
      * If the player was killed by another player, the
-     * killer receives a copy of a head, connected to the
-     * dead player.
+     * victim will drop a copy of his head.
      * 
      * @param event is the triggering event, used to get details on killed player
      */
@@ -40,18 +40,8 @@ public class PlayerDeathListener implements Listener{
                 name.setString("SkullOwner", event.getEntity().getName());
                 Bukkit.getLogger().info(name.getString("SkullOwner"));
                 item.getHandle().tag = name;
-                /**
-                 * Currently, it is impossible to 'drop' a named head.
-                 * The head loses it's NBTTagCompound data when it becomes
-                 * an entity. 
-                 * 
-                 * The workaround is to place the head into the killer's
-                 * inventory for the time being. 
-                 * 
-                 * Once the bug is resolved, will re-implement dropping heads.
-                 */
-                //event.getEntity().getWorld().dropItemNaturally(event.getEntity().getLocation(), item);
-                event.getEntity().getKiller().getInventory().addItem(item);
+                Item drop = event.getEntity().getWorld().dropItemNaturally(event.getEntity().getLocation(),  item);
+                drop.setItemStack(item);
             }
         }
     }
