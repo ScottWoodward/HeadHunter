@@ -1,3 +1,18 @@
+Version 1.1.2
+-------------
+- Compiled with proper version of java
+
+Version 1.1.1
+-------------
+- Removed some unneccesary code
+- Corrected minor bug left over from inventory insertion in v1.0.0
+- Removed console debug output
+
+Version 1.1.0
+-------------
+- Player heads now drop correctly as entities, no longer directly into player inventories
+- Player heads now stack properly
+
 Version 1.0.0
 -------------
 - Players killed by players will place a copy of the victim's head into the killer's inventory if there is room

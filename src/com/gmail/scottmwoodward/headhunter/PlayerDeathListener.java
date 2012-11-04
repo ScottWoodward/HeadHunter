@@ -8,7 +8,6 @@
 package com.gmail.scottmwoodward.headhunter;
 
 import net.minecraft.server.NBTTagCompound;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;
 import org.bukkit.entity.Item;
@@ -20,11 +19,6 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 public class PlayerDeathListener implements Listener{
 
     /**
-     * Sentinel value signifying a full inventory
-     */
-    public static final int FULL_INVENTORY = -1;
-
-    /**
      * This is the action executed when a player dies.
      * If the player was killed by another player, the
      * victim will drop a copy of his head.
@@ -34,15 +28,12 @@ public class PlayerDeathListener implements Listener{
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event){
         if(event.getEntity().getKiller() instanceof Player){
-            if(event.getEntity().getKiller().getInventory().firstEmpty()!= FULL_INVENTORY){
-                CraftItemStack item = new CraftItemStack(Material.SKULL_ITEM, 1, (short)3);
-                NBTTagCompound name = new NBTTagCompound();
-                name.setString("SkullOwner", event.getEntity().getName());
-                Bukkit.getLogger().info(name.getString("SkullOwner"));
-                item.getHandle().tag = name;
-                Item drop = event.getEntity().getWorld().dropItemNaturally(event.getEntity().getLocation(),  item);
-                drop.setItemStack(item);
-            }
+            CraftItemStack item = new CraftItemStack(Material.SKULL_ITEM, 1, (short)3);
+            NBTTagCompound name = new NBTTagCompound();
+            name.setString("SkullOwner", event.getEntity().getName());
+            item.getHandle().tag = name;
+            Item drop = event.getEntity().getWorld().dropItemNaturally(event.getEntity().getLocation(),  item);
+            drop.setItemStack(item);
         }
     }
 }
