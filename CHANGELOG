@@ -1,3 +1,11 @@
+Version 1.2.0
+-------------
+- Added ability for all mobs (Except Wither Skeletons) to drop their heads on death to a player
+- Added configuration options for percentage drop chances of each head type
+- Added configuration options to enable or disable each type of head drop
+- Added command /spawnhead <playername 
+- Rearranged code for better isolation of tasks
+
 Version 1.1.2
 -------------
 - Compiled with proper version of java

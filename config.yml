@@ -1,0 +1,22 @@
+# HeadHunter Configuration#
+
+# Whether or not each head type should drop from kills. 
+# NOTE: This does NOT alter the drop rate of wither skulls. If you enable Wither
+#       Skeleton drops here, these are in addition to normal drops.
+UseDrops:
+  Skeleton: true
+  Zombie: true
+  Player: true
+  Creeper: true
+  WitherSkeleton: false
+ 
+# Drop chance (in percent) for a head to drop when killed by a player.
+# NOTE: Values below 0 will reset to 0, values above 100 will reset to 100.
+#       Wither Skeleton drop rates are in addition to normal drops, so only
+#       apply if you wish to increase the drop rate.
+DropChance:
+  Skeleton: 25
+  Zombie: 25
+  Player: 100
+  Creeper: 25
+  WitherSkeleton: 0

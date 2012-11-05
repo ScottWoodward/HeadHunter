@@ -3,12 +3,16 @@
  * Purpose: Registers all Listeners and Command Executors
  *          for the plugin.
  * 
- * @version 1.0.0 10/31/12
+ * @version 1.2.0 11/5/12
  * @author Scott Woodward
  */
 package com.gmail.scottmwoodward.headhunter;
 
 import org.bukkit.plugin.java.JavaPlugin;
+
+import com.gmail.scottmwoodward.headhunter.helpers.CommandHelper;
+import com.gmail.scottmwoodward.headhunter.helpers.ConfigHelper;
+import com.gmail.scottmwoodward.headhunter.listeners.EntityDeathListener;
 
 public class HeadHunter extends JavaPlugin{
 
@@ -18,6 +22,9 @@ public class HeadHunter extends JavaPlugin{
      * the plugin
      */
     public void onEnable(){
-        getServer().getPluginManager().registerEvents(new PlayerDeathListener(), this);
+        this.saveDefaultConfig();
+        getServer().getPluginManager().registerEvents(new EntityDeathListener(), this);
+        getCommand("spawnhead").setExecutor(new CommandHelper());
+        new ConfigHelper(this);
     }
 }
