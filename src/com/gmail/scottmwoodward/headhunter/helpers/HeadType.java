@@ -23,4 +23,18 @@ public enum HeadType {
     public int getValue(){
         return value;
     }
+    
+    public static HeadType getHead(int value){
+        if(value == 0){
+            return SKELETON;
+        }else if(value == 1){
+            return WITHERSKELETON;
+        }else if(value == 2){
+            return ZOMBIE;
+        }else if(value == 3){
+            return HUMAN;
+        }else{
+            return CREEPER;
+        }
+    }
 }

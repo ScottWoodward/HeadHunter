@@ -13,6 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.gmail.scottmwoodward.headhunter.helpers.CommandHelper;
 import com.gmail.scottmwoodward.headhunter.helpers.ConfigHelper;
 import com.gmail.scottmwoodward.headhunter.listeners.EntityDeathListener;
+import com.gmail.scottmwoodward.headhunter.listeners.HeadWaterBreakListener;
 
 public class HeadHunter extends JavaPlugin{
 
@@ -24,6 +25,7 @@ public class HeadHunter extends JavaPlugin{
     public void onEnable(){
         this.saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new EntityDeathListener(), this);
+        getServer().getPluginManager().registerEvents(new HeadWaterBreakListener(),this);
         getCommand("spawnhead").setExecutor(new CommandHelper());
         new ConfigHelper(this);
     }

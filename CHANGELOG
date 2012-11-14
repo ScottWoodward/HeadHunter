@@ -1,3 +1,7 @@
+Version 1.2.1
+-------------
+- Added a work around for a current Bukkit bug (Water transmutes heads)
+
 Version 1.2.0
 -------------
 - Added ability for all mobs (Except Wither Skeletons) to drop their heads on death to a player
