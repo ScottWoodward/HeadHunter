@@ -9,7 +9,7 @@ package com.gmail.scottmwoodward.headhunter.listeners;
 
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.craftbukkit.entity.CraftSkeleton;
+import org.bukkit.craftbukkit.v1_4_5.entity.CraftSkeleton;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Skeleton;
