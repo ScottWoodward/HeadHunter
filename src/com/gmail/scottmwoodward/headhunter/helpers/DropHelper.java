@@ -7,13 +7,13 @@
  */
 package com.gmail.scottmwoodward.headhunter.helpers;
 
-import net.minecraft.server.v1_4_5.NBTTagCompound;
-
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
-import org.bukkit.craftbukkit.v1_4_5.inventory.*;
+import org.bukkit.craftbukkit.v1_4_6.inventory.CraftItemStack;
 import org.bukkit.entity.Item;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.SkullMeta;
 
 
 public class DropHelper {
@@ -30,13 +30,11 @@ public class DropHelper {
      */
     public static void drop(HeadType head, Location loc, String name, World world){
         if(shouldDrop(head)){
-            CraftItemStack item = new CraftItemStack(Material.SKULL_ITEM, 1, (short)head.getValue());
+        	ItemStack itemStack = new ItemStack(Material.SKULL_ITEM, 1);
+        	CraftItemStack item = CraftItemStack.asCraftCopy(itemStack);
             Item drop = world.dropItemNaturally(loc,item);
             if(name != null){
-                NBTTagCompound tag = new NBTTagCompound();
-                tag.setString("SkullOwner", name);
-                item.getHandle().tag = tag;
-                drop.setItemStack(item);
+                drop.setItemStack(setSkin(new ItemStack(Material.SKULL_ITEM, 1, (byte) 3), name));
             }
         }
     }
@@ -62,5 +60,11 @@ public class DropHelper {
         }else{
             return ((fraction*100) <= chance );
         }
+    }
+    private static ItemStack setSkin(ItemStack item, String nick) {
+        SkullMeta meta = (SkullMeta) item.getItemMeta();
+        meta.setOwner(nick);
+        item.setItemMeta(meta);
+        return item;
     }
 }
