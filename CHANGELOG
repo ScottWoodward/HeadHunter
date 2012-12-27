@@ -1,3 +1,11 @@
+Version 1.3.1
+-------------
+- Corrected an issue with monsters dropping only skeletons
+
+Version 1.3.0
+-------------
+- Fixed to comply with new Bukkit methods for handling meta data
+
 Version 1.2.2
 -------------
 - Updated code to reflect changes in Bukkit.

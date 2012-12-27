@@ -9,10 +9,10 @@ package com.gmail.scottmwoodward.headhunter.listeners;
 
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.craftbukkit.v1_4_6.entity.CraftSkeleton;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.Skeleton.SkeletonType;
 import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -42,8 +42,7 @@ public class EntityDeathListener implements Listener{
             }else if(event.getEntity() instanceof Creeper){
                 DropHelper.drop(HeadType.CREEPER, loc, null, world);
             }else if(event.getEntity() instanceof Skeleton){
-                CraftSkeleton skeleton = (CraftSkeleton)event.getEntity();
-                if(skeleton.getHandle().getSkeletonType() == 1){
+                if(((Skeleton)event.getEntity()).getSkeletonType() == SkeletonType.WITHER){
                     DropHelper.drop(HeadType.WITHERSKELETON, loc, null, world);
                 }else{
                     DropHelper.drop(HeadType.SKELETON, loc, null, world);
