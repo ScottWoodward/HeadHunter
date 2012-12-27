@@ -30,7 +30,7 @@ public class DropHelper {
      */
     public static void drop(HeadType head, Location loc, String name, World world){
         if(shouldDrop(head)){
-        	ItemStack itemStack = new ItemStack(Material.SKULL_ITEM, 1);
+        	ItemStack itemStack = new ItemStack(Material.SKULL_ITEM, 1, (short) head.getValue());
         	CraftItemStack item = CraftItemStack.asCraftCopy(itemStack);
             Item drop = world.dropItemNaturally(loc,item);
             if(name != null){
