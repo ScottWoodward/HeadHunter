@@ -18,6 +18,9 @@ public class ConfigHelper {
     public static double getDropChance(String key){
         return plugin.getConfig().getDouble("DropChance."+key);
     }
+    public static boolean getLooting() {
+    	return plugin.getConfig().getBoolean("ApplyLooting");
+    }
     /**
      * Gets worlds from Config file.
      * 

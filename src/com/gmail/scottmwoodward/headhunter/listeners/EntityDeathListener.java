@@ -39,16 +39,16 @@ public class EntityDeathListener implements Listener {
 			if (WorldHelper.isCurrentWorldDisabled(ConfigHelper.getWorlds(), world.getName()) == false) {
 				Location loc = event.getEntity().getLocation();
 				if (event.getEntity() instanceof Player) {
-					DropHelper.drop(HeadType.HUMAN, loc, ((Player) event.getEntity()).getName(), world);
+					DropHelper.drop(HeadType.HUMAN, loc, ((Player) event.getEntity()).getName(), world, event.getEntity().getKiller());
 				} else if (event.getEntity() instanceof Zombie) {
-					DropHelper.drop(HeadType.ZOMBIE, loc, null, world);
+					DropHelper.drop(HeadType.ZOMBIE, loc, null, world, event.getEntity().getKiller());
 				} else if (event.getEntity() instanceof Creeper) {
-					DropHelper.drop(HeadType.CREEPER, loc, null, world);
+					DropHelper.drop(HeadType.CREEPER, loc, null, world, event.getEntity().getKiller());
 				} else if (event.getEntity() instanceof Skeleton) {
 					if (((Skeleton) event.getEntity()).getSkeletonType() == SkeletonType.WITHER) {
-						DropHelper.drop(HeadType.WITHERSKELETON, loc, null, world);
+						DropHelper.drop(HeadType.WITHERSKELETON, loc, null, world, event.getEntity().getKiller());
 					} else {
-						DropHelper.drop(HeadType.SKELETON, loc, null, world);
+						DropHelper.drop(HeadType.SKELETON, loc, null, world, event.getEntity().getKiller());
 					}
 				}
 			}
