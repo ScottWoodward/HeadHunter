@@ -1,6 +1,10 @@
+Version 1.3.3
+-------------
+- Added the option to disable head drops in specified worlds. (***Delete old config file to generate new one with this option***)
+
 Version 1.3.2
 -------------
-- Updated code to reflect new Bukkit Beta Buold 1.4.7
+- Updated code to reflect new Bukkit Beta Build 1.4.7
 
 Version 1.3.1
 -------------

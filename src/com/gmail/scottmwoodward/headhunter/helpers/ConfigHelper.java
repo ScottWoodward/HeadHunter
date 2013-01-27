@@ -18,6 +18,11 @@ public class ConfigHelper {
     public static double getDropChance(String key){
         return plugin.getConfig().getDouble("DropChance."+key);
     }
+    /**
+     * Gets worlds from Config file.
+     * 
+     * @return A list of worlds that are present under DisabledWorlds section of config file.
+     */
     public static List<String> getWorlds() {
     	return plugin.getConfig().getStringList("DisabledWorlds");
     }

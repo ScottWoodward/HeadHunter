@@ -36,7 +36,7 @@ public class EntityDeathListener implements Listener {
 	public void onMobDeath(EntityDeathEvent event) {
 		if (event.getEntity().getKiller() instanceof Player) {
 			World world = event.getEntity().getWorld();
-			if (WorldHelper.isCurrentWorldDisabled(ConfigHelper.getWorlds(), world) == false) {
+			if (WorldHelper.isCurrentWorldDisabled(ConfigHelper.getWorlds(), world.getName()) == false) {
 				Location loc = event.getEntity().getLocation();
 				if (event.getEntity() instanceof Player) {
 					DropHelper.drop(HeadType.HUMAN, loc, ((Player) event.getEntity()).getName(), world);

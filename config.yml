@@ -20,5 +20,9 @@ DropChance:
   Player: 100
   Creeper: 25
   WitherSkeleton: 
-  
-DisabledWorlds: ['world_nether','world_the_end']
+
+# DisabledWorlds options allows you to disable worlds where the heads will drop.
+# When a world is disabled there will be no drops at all in that world.
+# World names must be exact
+# Example: DisabledWorlds: ['world_nether','world_the_end']
+DisabledWorlds: []
