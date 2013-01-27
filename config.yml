@@ -19,4 +19,6 @@ DropChance:
   Zombie: 25
   Player: 100
   Creeper: 25
-  WitherSkeleton: 0
+  WitherSkeleton: 
+  
+DisabledWorlds: ['world_nether','world_the_end']

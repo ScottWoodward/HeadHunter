@@ -1,5 +1,7 @@
 package com.gmail.scottmwoodward.headhunter.helpers;
 
+import java.util.List;
+
 import com.gmail.scottmwoodward.headhunter.HeadHunter;
 
 public class ConfigHelper {
@@ -13,8 +15,10 @@ public class ConfigHelper {
         return plugin.getConfig().getBoolean("UseDrops."+key);
     }
     
-    public static double getDouble(String key){
+    public static double getDropChance(String key){
         return plugin.getConfig().getDouble("DropChance."+key);
     }
-
+    public static List<String> getWorlds() {
+    	return plugin.getConfig().getStringList("DisabledWorlds");
+    }
 }

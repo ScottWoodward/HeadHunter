@@ -43,15 +43,15 @@ public class DropHelper {
         double fraction = Math.random();
         double chance = 0;
         if(head.getValue()==0 && ConfigHelper.getBoolean("Skeleton")){
-            chance = ConfigHelper.getDouble("Skeleton");
+            chance = ConfigHelper.getDropChance("Skeleton");
         }else if(head.getValue()==1 && ConfigHelper.getBoolean("WitherSkeleton")){
-            chance = ConfigHelper.getDouble("WitherSkeleton");
+            chance = ConfigHelper.getDropChance("WitherSkeleton");
         }else if(head.getValue()==2 && ConfigHelper.getBoolean("Zombie")){
-            chance = ConfigHelper.getDouble("Zombie");
+            chance = ConfigHelper.getDropChance("Zombie");
         }else if(head.getValue()==3 && ConfigHelper.getBoolean("Player")){
-            chance = ConfigHelper.getDouble("Player");
+            chance = ConfigHelper.getDropChance("Player");
         }else if(head.getValue()==4 && ConfigHelper.getBoolean("Creeper")){
-            chance = ConfigHelper.getDouble("Creeper");
+            chance = ConfigHelper.getDropChance("Creeper");
         }
         if(chance >= 100){
             return true;
