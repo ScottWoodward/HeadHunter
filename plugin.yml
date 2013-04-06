@@ -1,6 +1,6 @@
 name: HeadHunter
 main: com.gmail.scottmwoodward.headhunter.HeadHunter
-version: 1.3.6
+version: 1.3.7
 
 commands:
   spawnhead:
@@ -12,3 +12,6 @@ permissions:
   headhunter.command.spawnhead:
     description: Gives access to /spawnhead
     default: op
+  headhunter.noDrop:
+    description: With this permission a player's head will not drop
+    default: false
