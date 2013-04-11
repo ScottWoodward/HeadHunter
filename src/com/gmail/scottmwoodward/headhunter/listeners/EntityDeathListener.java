@@ -39,7 +39,7 @@ public class EntityDeathListener implements Listener {
 			if (WorldHelper.isCurrentWorldDisabled(ConfigHelper.getWorlds(), world.getName()) == false) {
 				Location loc = event.getEntity().getLocation();
 				if (event.getEntity() instanceof Player) {
-					if(!(event.getEntity().getKiller().hasPermission("headhunter.noDrop")))
+					if(!(((Player) event.getEntity()).hasPermission("headhunter.noDrop")))
 						DropHelper.drop(HeadType.HUMAN, loc, ((Player) event.getEntity()).getName(), world, event.getEntity().getKiller());
 				} else if (event.getEntity() instanceof Zombie) {
 					DropHelper.drop(HeadType.ZOMBIE, loc, null, world, event.getEntity().getKiller());
