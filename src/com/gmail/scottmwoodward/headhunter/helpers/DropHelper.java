@@ -10,7 +10,6 @@ package com.gmail.scottmwoodward.headhunter.helpers;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
-import org.bukkit.craftbukkit.v1_6_R2.inventory.CraftItemStack;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
@@ -55,8 +54,7 @@ public class DropHelper {
 			amount++;
 		if (amount != 0) {
 			ItemStack itemStack = new ItemStack(Material.SKULL_ITEM, amount, (short) head.getValue());
-			CraftItemStack item = CraftItemStack.asCraftCopy(itemStack);
-			Item drop = world.dropItemNaturally(loc, item);
+			Item drop = world.dropItemNaturally(loc, itemStack);
 			if (name != null) {
 				drop.setItemStack(setSkin(new ItemStack(Material.SKULL_ITEM, 1, (byte) 3), name));
 			}
