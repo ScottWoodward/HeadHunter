@@ -19,4 +19,14 @@ DropChance:
   Zombie: 25
   Player: 100
   Creeper: 25
-  WitherSkeleton: 0
+  WitherSkeleton: 
+  
+# Apply looting to each drop. If true, a sword with looting will result in a higher chance of gaining more heads.
+# The looting level is added to the default 1 chance. This means a looting 3 would have the ability to drop 4 heads on a kill.
+ApplyLooting: true
+
+# DisabledWorlds options allows you to disable worlds where the heads will drop.
+# When a world is disabled there will be no drops at all in that world.
+# World names must be exact
+# Example: DisabledWorlds: ['world_nether','world_the_end']
+DisabledWorlds: []
