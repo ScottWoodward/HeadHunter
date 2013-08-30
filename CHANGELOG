@@ -1,0 +1,84 @@
+Version 1.4.2
+-------------
+- Updated for latest Bukkit build (1.6.2)
+
+Version 1.4.1
+-------------
+- Updated for latest Bukkit build (1.6.1)
+
+Version 1.4.0
+-------------
+- Updated for latest Bukkit build
+
+Version 1.3.9
+-------------
+- Fixed headhunter.noDrop permission not working.
+
+Version 1.3.7
+-------------
+- Added permission "headhunter.noDrop". With this permission a user will not drop a head on death.
+
+Version 1.3.6
+-------------
+- Updated for latest Bukkit version 1.5.1
+
+Version 1.3.5
+-------------
+- Updated for latest Bukkit version 1.5
+
+Version 1.3.4
+-------------
+- Added looting effects to head drops. When a sword has looting now, it will affect how many heads may be dropped
+- Config option added to disable this (***Delete old config file to generate new one with this option***)
+
+Version 1.3.3
+-------------
+- Added the option to disable head drops in specified worlds. (***Delete old config file to generate new one with this option***)
+
+Version 1.3.2
+-------------
+- Updated code to reflect new Bukkit Beta Build 1.4.7
+
+Version 1.3.1
+-------------
+- Corrected an issue with monsters dropping only skeletons
+
+Version 1.3.0
+-------------
+- Fixed to comply with new Bukkit methods for handling meta data
+
+Version 1.2.2
+-------------
+- Updated code to reflect changes in Bukkit.
+
+Version 1.2.1
+-------------
+- Added a work around for a current Bukkit bug (Water transmutes heads)
+
+Version 1.2.0
+-------------
+- Added ability for all mobs (Except Wither Skeletons) to drop their heads on death to a player
+- Added configuration options for percentage drop chances of each head type
+- Added configuration options to enable or disable each type of head drop
+- Added command /spawnhead <playername 
+- Rearranged code for better isolation of tasks
+
+Version 1.1.2
+-------------
+- Compiled with proper version of java
+
+Version 1.1.1
+-------------
+- Removed some unneccesary code
+- Corrected minor bug left over from inventory insertion in v1.0.0
+- Removed console debug output
+
+Version 1.1.0
+-------------
+- Player heads now drop correctly as entities, no longer directly into player inventories
+- Player heads now stack properly
+
+Version 1.0.0
+-------------
+- Players killed by players will place a copy of the victim's head into the killer's inventory if there is room
+- Currently a bug prevents the dropping of heads as items, while preserving their player identity
