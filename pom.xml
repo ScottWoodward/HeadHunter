@@ -4,9 +4,12 @@
 	<groupId>com.scottwoodward.headhunter</groupId>
 	<artifactId>HeadHunter</artifactId>
 	<packaging>jar</packaging>
-	<version>1.4.2</version>
 	<name>HeadHunter</name>
+	<version>1.4.2</version>
 	<url>http://maven.apache.org</url>
+	<properties>
+		<build.number>SNAPSHOT</build.number>
+	</properties>
 	<repositories>
           <repository>
           <id>bukkit-repo</id>
@@ -23,7 +26,7 @@
 	
 	<build>
 		<sourceDirectory>src/main</sourceDirectory>
-		<finalName>${project.artifactId}</finalName>
+		<finalName>${project.artifactId}-${build.number}</finalName>
 		<plugins>
 		<plugin>
 			<artifactId>maven-compiler-plugin</artifactId>
