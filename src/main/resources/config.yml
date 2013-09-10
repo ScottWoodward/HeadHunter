@@ -25,6 +25,12 @@ UseDrops:
   Squid: true
   Villager: true
   Golem: true
+  Bat: true
+  Wolf: true
+  Cat: true
+  Witch: true
+  Silverfish: true
+  Horse: true
  
 # Drop chance (in percent) for a head to drop when killed by a player.
 # NOTE: Values below 0 will reset to 0, values above 100 will reset to 100.
@@ -52,6 +58,12 @@ DropChance:
   Squid: 10
   Villager: 10
   Golem: 25
+  Bat: 10
+  Wolf: 10
+  Cat: 10
+  Witch: 10
+  Silverfish: 25
+  Horse: 10
   
 # Apply looting to each drop. If true, a sword with looting will result in a higher chance of gaining more heads.
 # The looting level is added to the default 1 chance. This means a looting 3 would have the ability to drop 4 heads on a kill.
