@@ -71,8 +71,40 @@ public class DropHelper {
 		} else if (head.getValue() == 2 && ConfigHelper.getBoolean("Zombie")) {
 			chance = ConfigHelper.getDropChance("Zombie");
 		} else if (head.getValue() == 3 && ConfigHelper.getBoolean("Player")) {
-			chance = ConfigHelper.getDropChance("Player");
-		} else if (head.getValue() == 4 && ConfigHelper.getBoolean("Creeper")) {
+            chance = ConfigHelper.getDropChance("Player");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Blaze")) {
+            chance = ConfigHelper.getDropChance("Blaze");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("CaveSpider")) {
+            chance = ConfigHelper.getDropChance("CaveSpider");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Chicken")) {
+            chance = ConfigHelper.getDropChance("Chicken");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Cow")) {
+            chance = ConfigHelper.getDropChance("Cow");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Ghast")) {
+            chance = ConfigHelper.getDropChance("Ghast");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("MagmaCube")) {
+            chance = ConfigHelper.getDropChance("MagmaCube");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Mooshroom")) {
+            chance = ConfigHelper.getDropChance("Mooshroom");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Pig")) {
+            chance = ConfigHelper.getDropChance("Pig");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("ZombiePigman")) {
+            chance = ConfigHelper.getDropChance("ZombiePigman");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Sheep")) {
+            chance = ConfigHelper.getDropChance("Sheep");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Slime")) {
+            chance = ConfigHelper.getDropChance("Slime");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Spider")) {
+            chance = ConfigHelper.getDropChance("Spider");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Squid")) {
+            chance = ConfigHelper.getDropChance("Squid");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Villager")) {
+            chance = ConfigHelper.getDropChance("Villager");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Golem")) {
+            chance = ConfigHelper.getDropChance("Golem");
+        }  else if (head.getValue() == 3 && ConfigHelper.getBoolean("Enderman")) {
+            chance = ConfigHelper.getDropChance("Enderman");
+        } else if (head.getValue() == 4 && ConfigHelper.getBoolean("Creeper")) {
 			chance = ConfigHelper.getDropChance("Creeper");
 		}
 		if (chance >= 100) {

@@ -9,6 +9,22 @@ UseDrops:
   Player: true
   Creeper: true
   WitherSkeleton: false
+  Blaze: true
+  CaveSpider: true
+  Chicken: true
+  Cow: true
+  Enderman: true
+  Ghast: true
+  MagmaCube: true
+  Mooshroom: true
+  Pig: true
+  ZombiePigman: true
+  Sheep: true
+  Slime: true
+  Spider: true
+  Squid: true
+  Villager: true
+  Golem: true
  
 # Drop chance (in percent) for a head to drop when killed by a player.
 # NOTE: Values below 0 will reset to 0, values above 100 will reset to 100.
@@ -20,6 +36,22 @@ DropChance:
   Player: 100
   Creeper: 25
   WitherSkeleton: 
+  Blaze: 25
+  CaveSpider: 10
+  Chicken: 10
+  Cow: 10
+  Enderman: 25
+  Ghast: 25
+  MagmaCube: 10
+  Mooshroom: 10
+  Pig: 10
+  ZombiePigman: 25
+  Sheep: 10
+  Slime: 10
+  Spider: 25
+  Squid: 10
+  Villager: 10
+  Golem: 25
   
 # Apply looting to each drop. If true, a sword with looting will result in a higher chance of gaining more heads.
 # The looting level is added to the default 1 chance. This means a looting 3 would have the ability to drop 4 heads on a kill.
