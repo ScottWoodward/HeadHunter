@@ -59,7 +59,7 @@ public class EntityDeathListener implements Listener {
 				if (event.getEntity() instanceof Player) {
 					if(!(((Player) event.getEntity()).hasPermission("headhunter.noDrop")))
 						DropHelper.drop(HeadType.HUMAN, loc, ((Player) event.getEntity()).getName(), world, event.getEntity().getKiller());
-				} else if (event.getEntity() instanceof Zombie) {
+				} else if (event.getEntity() instanceof Zombie && event.getEntityType() == EntityType.ZOMBIE) {
 					DropHelper.drop(HeadType.ZOMBIE, loc, null, world, event.getEntity().getKiller());
 				} else if (event.getEntity() instanceof Creeper) {
 					DropHelper.drop(HeadType.CREEPER, loc, null, world, event.getEntity().getKiller());
@@ -75,7 +75,7 @@ public class EntityDeathListener implements Listener {
                     DropHelper.drop(HeadType.HUMAN, loc, "MHF_CaveSpider", world, event.getEntity().getKiller());
                 } else if(event.getEntity() instanceof Chicken) {
                     DropHelper.drop(HeadType.HUMAN, loc, "MHF_Chicken", world, event.getEntity().getKiller());
-                } else if(event.getEntity() instanceof Cow) {
+                } else if(event.getEntityType() == EntityType.COW) {
                     DropHelper.drop(HeadType.HUMAN, loc, "MHF_Cow", world, event.getEntity().getKiller());
                 } else if(event.getEntity() instanceof Enderman) {
                     DropHelper.drop(HeadType.HUMAN, loc, "MHF_Enderman", world, event.getEntity().getKiller());
