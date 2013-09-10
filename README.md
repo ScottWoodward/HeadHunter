@@ -15,8 +15,8 @@ Continuous Integration
 
 We use a Jenkins server for building the final plugin. The server can be found <a href="http://jenkins.scott-woodward.com">here</a>
 
-Verioning
----------
+Versioning
+----------
 
 Version numbers are of the form: <x>.<y>.<z>
 
