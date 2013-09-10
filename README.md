@@ -19,8 +19,11 @@ Verioning
 ---------
 
 Version numbers are of the form: <x>.<y>.<z>
+
 x = Major version, representing massive changes to the code base
+
 y = Minor version, usually feature updates
+
 z = Bug fixes, no content addition
 
 Suggestions
