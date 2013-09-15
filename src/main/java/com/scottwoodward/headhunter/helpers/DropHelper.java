@@ -71,39 +71,70 @@ public class DropHelper {
         } else if (head.getValue() == 2 && ConfigHelper.getBoolean("Zombie")) {
             chance = ConfigHelper.getDropChance("Zombie");
         } else if (head.getValue() == 3) {
+            if (name.equals("MHF_Blaze")) {
+                if(ConfigHelper.getBoolean("Blaze")){
+                    chance = ConfigHelper.getDropChance("Blaze");
+                }
+            }  else if (name.equals("MHF_Blaze")) {
+                if(ConfigHelper.getBoolean("CaveSpider")){
+                    chance = ConfigHelper.getDropChance("CaveSpider");
+                }
+            }  else if (name.equals("MHF_CaveSpider")) {
+                if(ConfigHelper.getBoolean("Chicken")){
+                    chance = ConfigHelper.getDropChance("Chicken");
+                }
+            }  else if (name.equals("MHF_Chicken")) {
+                if( ConfigHelper.getBoolean("Cow")){
+                    chance = ConfigHelper.getDropChance("Cow");}
 
-            if (name.equals("MHF_Blaze") && ConfigHelper.getBoolean("Blaze")) {
-                chance = ConfigHelper.getDropChance("Blaze");
-            }  else if (name.equals("MHF_Blaze") && ConfigHelper.getBoolean("CaveSpider")) {
-                chance = ConfigHelper.getDropChance("CaveSpider");
-            }  else if (name.equals("MHF_CaveSpider") && ConfigHelper.getBoolean("Chicken")) {
-                chance = ConfigHelper.getDropChance("Chicken");
-            }  else if (name.equals("MHF_Chicken") && ConfigHelper.getBoolean("Cow")) {
-                chance = ConfigHelper.getDropChance("Cow");
-            }  else if (name.equals("MHF_Cow") && ConfigHelper.getBoolean("Ghast")) {
-                chance = ConfigHelper.getDropChance("Ghast");
-            }  else if (name.equals("MHF_LavaSlime") && ConfigHelper.getBoolean("MagmaCube")) {
-                chance = ConfigHelper.getDropChance("MagmaCube");
-            }  else if (name.equals("MHF_MushroomCow") && ConfigHelper.getBoolean("Mooshroom")) {
-                chance = ConfigHelper.getDropChance("Mooshroom");
-            }  else if (name.equals("MHF_Pig") && ConfigHelper.getBoolean("Pig")) {
-                chance = ConfigHelper.getDropChance("Pig");
-            }  else if (name.equals("MHF_PigZombie") && ConfigHelper.getBoolean("ZombiePigman")) {
-                chance = ConfigHelper.getDropChance("ZombiePigman");
-            }  else if (name.equals("MHF_Sheep") && ConfigHelper.getBoolean("Sheep")) {
-                chance = ConfigHelper.getDropChance("Sheep");
-            }  else if (name.equals("MHF_Slime") && ConfigHelper.getBoolean("Slime")) {
-                chance = ConfigHelper.getDropChance("Slime");
-            }  else if (name.equals("MHF_Spider") && ConfigHelper.getBoolean("Spider")) {
-                chance = ConfigHelper.getDropChance("Spider");
-            }  else if (name.equals("MHF_Squid") && ConfigHelper.getBoolean("Squid")) {
-                chance = ConfigHelper.getDropChance("Squid");
-            }  else if (name.equals("MHF_Villager") && ConfigHelper.getBoolean("Villager")) {
-                chance = ConfigHelper.getDropChance("Villager");
-            }  else if (name.equals("MHF_Golem") && ConfigHelper.getBoolean("Golem")) {
-                chance = ConfigHelper.getDropChance("Golem");
-            }  else if (name.equals("MHF_Enderman") && ConfigHelper.getBoolean("Enderman")) {
-                chance = ConfigHelper.getDropChance("Enderman");
+            }  else if (name.equals("MHF_Cow")) {
+                if(ConfigHelper.getBoolean("Ghast")){
+                    chance = ConfigHelper.getDropChance("Ghast");
+                }
+            }  else if (name.equals("MHF_LavaSlime")) {
+                if(ConfigHelper.getBoolean("MagmaCube")){
+                    chance = ConfigHelper.getDropChance("MagmaCube");
+                }
+            }  else if (name.equals("MHF_MushroomCow")) {
+                if(ConfigHelper.getBoolean("Mooshroom")){
+                    chance = ConfigHelper.getDropChance("Mooshroom");
+                }
+            }  else if (name.equals("MHF_Pig")) {
+                if(ConfigHelper.getBoolean("Pig")){
+                    chance = ConfigHelper.getDropChance("Pig");
+                }
+            }  else if (name.equals("MHF_PigZombie")) {
+                if(ConfigHelper.getBoolean("ZombiePigman")){
+                    chance = ConfigHelper.getDropChance("ZombiePigman");
+                }
+            }  else if (name.equals("MHF_Sheep")) {
+                if(ConfigHelper.getBoolean("Sheep")){
+                    chance = ConfigHelper.getDropChance("Sheep");
+                }
+            }  else if (name.equals("MHF_Slime")) {
+                if(ConfigHelper.getBoolean("Slime")){
+                    chance = ConfigHelper.getDropChance("Slime");
+                }
+            }  else if (name.equals("MHF_Spider")) {
+                if(ConfigHelper.getBoolean("Spider")){
+                    chance = ConfigHelper.getDropChance("Spider");
+                }
+            }  else if (name.equals("MHF_Squid")) {
+                if(ConfigHelper.getBoolean("Squid")){
+                    chance = ConfigHelper.getDropChance("Squid");
+                }
+            }  else if (name.equals("MHF_Villager")) {
+                if(ConfigHelper.getBoolean("Villager")){
+                    chance = ConfigHelper.getDropChance("Villager");
+                }
+            }  else if (name.equals("MHF_Golem")) {
+                if(ConfigHelper.getBoolean("Golem")){
+                    chance = ConfigHelper.getDropChance("Golem");
+                }
+            }  else if (name.equals("MHF_Enderman")) {
+                if(ConfigHelper.getBoolean("Enderman")){
+                    chance = ConfigHelper.getDropChance("Enderman");
+                }
             } else if(ConfigHelper.getBoolean("Player")){
                 chance = ConfigHelper.getDropChance("Player");
             }

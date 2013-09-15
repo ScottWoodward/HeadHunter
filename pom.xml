@@ -5,7 +5,7 @@
 	<artifactId>HeadHunter</artifactId>
 	<packaging>jar</packaging>
 	<name>HeadHunter</name>
-	<version>1.4.2</version>
+	<version>1.5.1</version>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<build.number>SNAPSHOT</build.number>
@@ -20,7 +20,7 @@
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
-			<version>1.6.2-R0.1</version>
+			<version>1.6.2-R1.0</version>
 		</dependency>
 	</dependencies>
 	

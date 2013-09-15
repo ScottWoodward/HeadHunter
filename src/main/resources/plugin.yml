@@ -1,6 +1,6 @@
 name: HeadHunter
 main: com.scottwoodward.headhunter.HeadHunter
-version: 1.5.0
+version: 1.5.1
 
 commands:
   spawnhead:
