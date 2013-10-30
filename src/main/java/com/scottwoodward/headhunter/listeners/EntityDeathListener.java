@@ -12,7 +12,6 @@ import org.bukkit.World;
 import org.bukkit.entity.Blaze;
 import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Chicken;
-import org.bukkit.entity.Cow;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Enderman;
 import org.bukkit.entity.EntityType;
@@ -20,6 +19,7 @@ import org.bukkit.entity.Ghast;
 import org.bukkit.entity.Golem;
 import org.bukkit.entity.MagmaCube;
 import org.bukkit.entity.MushroomCow;
+import org.bukkit.entity.Ocelot;
 import org.bukkit.entity.Pig;
 import org.bukkit.entity.PigZombie;
 import org.bukkit.entity.Player;
@@ -34,7 +34,6 @@ import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
-import org.bukkit.event.entity.PigZapEvent;
 
 import com.scottwoodward.headhunter.helpers.ConfigHelper;
 import com.scottwoodward.headhunter.helpers.DropHelper;
@@ -101,6 +100,8 @@ public class EntityDeathListener implements Listener {
                     DropHelper.drop(HeadType.HUMAN, loc, "MHF_LavaSlime", world, event.getEntity().getKiller());
                 } else if(event.getEntity() instanceof Slime) {
                     DropHelper.drop(HeadType.HUMAN, loc, "MHF_Slime", world, event.getEntity().getKiller());
+                } else if(event.getEntity() instanceof Ocelot) {
+                    DropHelper.drop(HeadType.HUMAN, loc, "MHF_Ocelot", world, event.getEntity().getKiller());
                 } 
 			}
 		}
