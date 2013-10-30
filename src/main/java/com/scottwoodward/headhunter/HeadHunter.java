@@ -14,6 +14,7 @@ import com.scottwoodward.headhunter.helpers.CommandHelper;
 import com.scottwoodward.headhunter.helpers.ConfigHelper;
 import com.scottwoodward.headhunter.listeners.EntityDeathListener;
 import com.scottwoodward.headhunter.listeners.HeadWaterBreakListener;
+import com.scottwoodward.headhunter.listeners.RightClickListener;
 
 public class HeadHunter extends JavaPlugin{
 
@@ -26,6 +27,7 @@ public class HeadHunter extends JavaPlugin{
         this.saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new EntityDeathListener(), this);
         getServer().getPluginManager().registerEvents(new HeadWaterBreakListener(),this);
+        getServer().getPluginManager().registerEvents(new RightClickListener(), this);
         getCommand("spawnhead").setExecutor(new CommandHelper());
         new ConfigHelper(this);
     }

@@ -1,6 +1,6 @@
 name: HeadHunter
 main: com.scottwoodward.headhunter.HeadHunter
-version: 1.5.1
+version: 1.7.0
 
 commands:
   spawnhead:
@@ -15,3 +15,6 @@ permissions:
   headhunter.noDrop:
     description: With this permission a player's head will not drop
     default: false
+  headhunter.flag.identify:
+    description: Gives ability to identify heads with right click
+    default: true
