@@ -57,14 +57,15 @@ public class DropHelper {
 			ItemStack itemStack = new ItemStack(Material.SKULL_ITEM, amount, (short) head.getValue());
 			String headName = getName(name);
 			if(headName != null){
-				ItemMeta meta = itemStack.getItemMeta();
-				meta.setDisplayName(headName);
+			    SkullMeta meta = (SkullMeta)itemStack.getItemMeta();
+			    meta.setDisplayName(headName);
 				itemStack.setItemMeta(meta);
 			}
-			Item drop = world.dropItemNaturally(loc, itemStack);
-			if (name != null) {
-				drop.setItemStack(setSkin(new ItemStack(Material.SKULL_ITEM, 1, (byte) 3), name));
+			if(name != null)
+			{
+			    setSkin(itemStack, name);
 			}
+			world.dropItemNaturally(loc, itemStack);
 		}
 	}
 
@@ -170,7 +171,15 @@ public class DropHelper {
 	}
 
 	private static String getName(String name){
-		String headName = null;
+		if(name == null){
+		    return null;
+		}
+		String headName = name;
+		if(name.endsWith("s")){
+		    name = name + "' Head";
+		}else{
+		    name = name + "'s Head";
+		}
 		if (name.equals("MHF_Blaze")) {
 			headName = "Blaze Head";
 		}  else if (name.equals("MHF_CaveSpider")) {
