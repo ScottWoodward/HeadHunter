@@ -5,7 +5,7 @@
 	<artifactId>HeadHunter</artifactId>
 	<packaging>jar</packaging>
 	<name>HeadHunter</name>
-	<version>1.5.1</version>
+	<version>1.7.0</version>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<build.number>SNAPSHOT</build.number>
