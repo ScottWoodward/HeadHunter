@@ -1,20 +1,31 @@
+main: com.binaryphoenixstudios.mc.headhunter.HeadHunterPlugin
+version: 2.0.0
 name: HeadHunter
-main: com.scottwoodward.headhunter.HeadHunter
-version: 1.7.1
 
 commands:
-  spawnhead:
-    description: Spawns a copy of the specified player's head into your inventory.
-    usage: /spawnhead <playername>
-    permission: headhunter.command.spawnhead
-    
+    reload:
+        description: Reloads HeadHunter.
+        aliases: [hhreload, reloadhh, headhunterreload, reloadheadhunter]
+        permission: headhunter.command.reload
+        usage: Syntax - /reload
+    spawnhead:
+        description: Spawns the specified player head.
+        aliases: [hhspawnhead, spawnheadhh]
+        permission: headhunter.command.spawnhead
+        usage: Syntax - /spawnhead <Player Name>
+    version:
+        description: Displays the version of the HeadHunter plugrin.
+        aliases: [hhversion, versionhh]
+        permission: headhunter.command.version
+        usage: Syntax - /version
+
 permissions:
-  headhunter.command.spawnhead:
-    description: Gives access to /spawnhead
-    default: op
-  headhunter.noDrop:
-    description: With this permission a player's head will not drop
-    default: false
-  headhunter.flag.identify:
-    description: Gives ability to identify heads with right click
-    default: true
+    headhunter.command.reload:
+        description: Gives access to HeadHunter's reload command.
+        default: op
+    headhunter.command.spawnhead:
+        description: Gives access to HeadHunter's spawnhead command.
+        default: op
+    headhunter.command.version:
+        description: Gives access to HeadHunter's version command.
+        default: true
