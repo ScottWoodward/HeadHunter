@@ -1,5 +1,6 @@
 package com.binaryphoenixstudios.mc.headhunter.listener;
 
+import com.binaryphoenixstudios.mc.headhunter.HeadHunterConstants;
 import com.binaryphoenixstudios.mc.headhunter.HeadHunterPlugin;
 import com.binaryphoenixstudios.mc.headhunter.factory.HeadFactory;
 import com.binaryphoenixstudios.mc.headhunter.model.HeadConfig;
@@ -7,6 +8,7 @@ import org.apache.commons.lang.StringUtils;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
@@ -36,7 +38,8 @@ public class EntityDeathListener implements Listener
 		if(headConfig != null
 				&& shouldHeadDrop(headConfig.getChance())
 				&& (isPlayerKill(event) || !plugin.dropOnPlayerKillOnly())
-				&& !plugin.isWorldDisabled(event.getEntity().getWorld().getName()))
+				&& !plugin.isWorldDisabled(event.getEntity().getWorld().getName())
+				&& !isPlayerImmune(event))
 		{
 			Material material = Material.valueOf(headConfig.getMaterialName());
 			int quantity = calculateDropQuantity(event, headConfig);
@@ -67,6 +70,18 @@ public class EntityDeathListener implements Listener
 	{
 		double actual = random.nextDouble() * 100;
 		return actual <= dropChance;
+	}
+
+	protected boolean isPlayerImmune(EntityDeathEvent event)
+	{
+		boolean isImmune = false;
+
+		if(event.getEntityType() == EntityType.PLAYER &&
+				((Player)event.getEntity()).hasPermission(HeadHunterConstants.IMMUNE_DROPS_PERMISSION))
+		{
+			isImmune = true;
+		}
+		return isImmune;
 	}
 
 	protected boolean isPlayerKill(EntityDeathEvent event)
