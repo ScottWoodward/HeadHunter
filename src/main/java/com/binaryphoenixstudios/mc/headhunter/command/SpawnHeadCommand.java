@@ -1,9 +1,9 @@
 package com.binaryphoenixstudios.mc.headhunter.command;
 
 import com.binaryphoenixstudios.mc.headhunter.factory.HeadFactory;
-import net.md_5.bungee.api.ChatColor;
 import org.apache.commons.lang.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -46,8 +46,9 @@ public class SpawnHeadCommand implements CommandExecutor
 	protected void spawnHead(Player player, String playerName)
 	{
 		Inventory inventory = player.getInventory();
-		if(inventory.firstEmpty() < 1)
+		if(inventory.firstEmpty() < 0)
 		{
+			System.out.println(inventory.firstEmpty());
 			player.sendMessage(ChatColor.DARK_RED + "You do not have enough inventory space");
 		}
 		else

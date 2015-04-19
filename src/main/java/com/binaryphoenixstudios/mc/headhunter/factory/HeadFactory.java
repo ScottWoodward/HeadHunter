@@ -2,7 +2,6 @@ package com.binaryphoenixstudios.mc.headhunter.factory;
 
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Material;
-import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
 
