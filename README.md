@@ -13,18 +13,7 @@ mvn clean package
 Continuous Integration
 ----------------------
 
-We use a Jenkins server for building the final plugin. The server can be found <a href="http://jenkins.scott-woodward.com">here</a>
-
-Versioning
-----------
-
-Version numbers are of the form: <x>.<y>.<z>
-
-x = Major version, representing massive changes to the code base
-
-y = Minor version, usually feature updates
-
-z = Bug fixes, no content addition
+We use a Bamboo server for building nightly snapshots of the plugin. The server can be found <a href="http://bamboo.binaryphoenixstudios.com">here</a>
 
 Suggestions
 -----------
