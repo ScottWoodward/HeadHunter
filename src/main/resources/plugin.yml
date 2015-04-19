@@ -1,5 +1,5 @@
 main: com.binaryphoenixstudios.mc.headhunter.HeadHunterPlugin
-version: 2.0.0
+version: 2.1.0
 name: HeadHunter
 
 commands:
@@ -29,3 +29,6 @@ permissions:
     headhunter.command.version:
         description: Gives access to HeadHunter's version command.
         default: true
+    headhunter.flag.immune:
+        description: Flags the user as immune from having their head drop.
+        default: false
